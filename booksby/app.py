@@ -1,10 +1,14 @@
 """
 main file
 """
-import emmett
+from emmett import App
 
-app = emmett.App(__name__)
+app = App(__name__)
 
 @app.route("/")
 async def hello():
-    return "<html><head><title>Hello from Emmett</title></head><body><h2>Hello, world!</h2></body></html>"
+    return "Hello, world!"
+
+@app.route("/jsonhello")
+async def json_hello():
+    return {"message": "Hello, world!"}
