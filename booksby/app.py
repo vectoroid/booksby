@@ -1,9 +1,9 @@
 """
 main file
 """
-import emmett
+from emmett import App
 
-app = emmett.App(__name__)
+app = App(__name__)
 
 @app.route("/")
 async def hello():
